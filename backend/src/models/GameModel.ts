@@ -8,7 +8,7 @@ export interface Game {
     numOfPeople: number;
     date: Date;
     time:string;
-    fieldNumer:number;
+    fieldNumber:number;
 }
 /* "date": "2023-10-17T00:00:00.000Z"*/
 
@@ -19,7 +19,7 @@ const GameSchema = new Schema<Game>({
     numOfPeople: {type:Number, required: true},
     date: {type:Date, required: true},
     time: {type:String},
-    fieldNumer: {type:Number, required: true}
+    fieldNumber: {type:Number, required: true}
 })
 
 export default  model<Game>('Game', GameSchema);
