@@ -36,7 +36,7 @@ export const getGameById = createAsyncThunk<Game, string> (
     "games/getGamesById",
     async(id, thunkAPI) => {
         try {
-            const response = await axios.post(`http://localhost:8080/api/games/game/${id}`);
+            const response = await axios.get(`http://localhost:8080/api/games/game/${id}`);
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error);

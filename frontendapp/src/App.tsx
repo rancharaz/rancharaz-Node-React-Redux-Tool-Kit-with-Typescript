@@ -7,6 +7,7 @@ import { getGames } from './features/games/gameSlice';
 import { useAppDispatch } from './store/store';
 import ResponsiveAppBar from './components/UI/Navbar';
 import SingleGamePage from './features/games/SingleGamePage';
+import CreateGamePage from './features/games/CreateGamePage';
 
 function App() {
 
@@ -24,8 +25,9 @@ function App() {
    <BrowserRouter>
    <ResponsiveAppBar />
     <Routes>
-      <Route path="" element={<GamePages />} />
+      <Route path="/" element={<GamePages />} />
       <Route path="/game/:id" element={<SingleGamePage />} />
+      <Route path="/create-game" element={<CreateGamePage />} />
     </Routes>
    </BrowserRouter>
   );
